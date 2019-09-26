@@ -14,6 +14,7 @@ import './Card.scss';
  *   Card.Content
  *   Card.Bottom
  */
+ 
 class Card extends Component {
   static Top({ types, status, children }) {
     // quickly convert STATUS_OPTIONS object to array

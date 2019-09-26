@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getProperties } from '../../dux/properties';
 
+import Navigation from '../../components/navigation/Navigation';
+
 class Properties extends Component {
   // constructor(props) {
   //   super(props);
@@ -23,9 +25,15 @@ class Properties extends Component {
   }
 
   render() {
+
+    console.log(this.props)
+
+
     return (
       <div className="page">
         Properties Page
+
+        <Navigation/>
       </div>
     )
   }
@@ -35,4 +43,9 @@ Properties.propTypes = {
   dispatch: PropTypes.func.isRequired
 }
 
-export default connect(null)(Properties);
+const mapStateToProps = (state) => {
+  const { properties } = state;
+  return { properties };
+}
+
+export default connect(mapStateToProps)(Properties);

@@ -6,7 +6,7 @@ export const SETTINGS = {
   LOCALE_COOKIE: 'language', // name of the language cookie
   DAYS_LOCALE_SAVED: 366,
 
-  API_SERVER: 'https://us-central1-join-thingy-v01.cloudfunctions.net',
+  API_SERVER: 'https://dwellingly-api-heroku.herokuapp.com',
   API_VERSION: 'v1',
 
   ORGANIZATION: 'JOIN',
@@ -24,7 +24,7 @@ export const ENDPOINTS = {
     SETTINGS.API_VERSION
   }/emergencyNumbers/`,
   LEASE: `${SETTINGS.API_SERVER}/api/${SETTINGS.API_VERSION}/lease/`,
-  PROPERTY: `${SETTINGS.API_SERVER}/api/${SETTINGS.API_VERSION}/properties/`,
+  PROPERTY: `${SETTINGS.API_SERVER}/${SETTINGS.API_VERSION}/properties`,
   TENANT: `${SETTINGS.API_SERVER}/api/${SETTINGS.API_VERSION}/tenants/`,
   TICKET: `${SETTINGS.API_SERVER}/api/${SETTINGS.API_VERSION}/tickets/`,
   USER: `${SETTINGS.API_SERVER}/api/${SETTINGS.API_VERSION}/users/`
