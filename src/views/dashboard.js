@@ -17,7 +17,7 @@ export const Dashboard = (props) => {
 
     useEffect(() => {
         axios.post(
-            "/users/role",
+            "/api/users/role",
             { userrole: "pending" },
             { headers: { "Authorization": `Bearer ${userContext.user.accessJwt}` } })
             .then(res => setUsersPending(res.data.users));
